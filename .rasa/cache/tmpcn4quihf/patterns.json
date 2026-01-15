@@ -1,0 +1,14 @@
+[
+  {
+    "name": "email",
+    "pattern": "(?i)\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b"
+  },
+  {
+    "name": "phone",
+    "pattern": "\\+?\\d[\\d\\s\\-]{4,}\\d"
+  },
+  {
+    "name": "reclamation_id",
+    "pattern": "\\b\\d{1,8}\\b"
+  }
+]

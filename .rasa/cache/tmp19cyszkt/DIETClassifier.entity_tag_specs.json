@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-email",
+      "2": "I-email",
+      "3": "L-email",
+      "4": "U-email",
+      "5": "B-phone",
+      "6": "I-phone",
+      "7": "L-phone",
+      "8": "U-phone",
+      "9": "B-problem_description",
+      "10": "I-problem_description",
+      "11": "L-problem_description",
+      "12": "U-problem_description",
+      "13": "B-reclamation_id",
+      "14": "I-reclamation_id",
+      "15": "L-reclamation_id",
+      "16": "U-reclamation_id",
+      "17": "B-username",
+      "18": "I-username",
+      "19": "L-username",
+      "20": "U-username",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-email": 1,
+      "I-email": 2,
+      "L-email": 3,
+      "U-email": 4,
+      "B-phone": 5,
+      "I-phone": 6,
+      "L-phone": 7,
+      "U-phone": 8,
+      "B-problem_description": 9,
+      "I-problem_description": 10,
+      "L-problem_description": 11,
+      "U-problem_description": 12,
+      "B-reclamation_id": 13,
+      "I-reclamation_id": 14,
+      "L-reclamation_id": 15,
+      "U-reclamation_id": 16,
+      "B-username": 17,
+      "I-username": 18,
+      "L-username": 19,
+      "U-username": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

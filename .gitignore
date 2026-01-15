@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Rasa cache / temp
+.cache/
+*.tmp
+*.pickle
+*.pkl
+
+# Secrets / local configs
+.env
+.env.*
+*.pem
+*.key
+
+# Keep models in GitHub ✅ (IMPORTANT)
+# (Do NOT ignore /models)

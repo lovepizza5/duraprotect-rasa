@@ -1,0 +1,34 @@
+#stories.yml
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: complete reclamation path (with form)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: report_issue
+  - action: utter_ask_for_details
+  - intent: problem_description
+  - action: reclamation_form
+  - active_loop: reclamation_form
+  - active_loop: null
+  - action: action_submit_reclamation
+  - action: utter_goodbye
+
+- story: track reclamation by id
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: track_reclamation
+  - action: track_reclamation_form
+  - active_loop: track_reclamation_form
+  - intent: provide_tracking_id
+    entities:
+      - reclamation_id: "88"
+  - active_loop: null
+  - action: action_track_reclamation

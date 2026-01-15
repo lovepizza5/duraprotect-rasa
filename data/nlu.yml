@@ -1,0 +1,355 @@
+#nlu.yml
+version: "3.1"
+
+nlu:
+
+# ---------------------------
+# REGEX (helps a lot)
+# ---------------------------
+- regex: reclamation_id
+  examples: |
+    - \b\d{1,8}\b
+
+- regex: email
+  examples: |
+    - (?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b
+
+- regex: phone
+  examples: |
+    - \+?\d[\d\s\-]{4,}\d
+
+# ---------------------------
+# GREET (EN/FR)
+# ---------------------------
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - hey there
+    - good morning
+    - good evening
+    - yo
+    - start
+    - can you help me
+    - I need help
+    - bonjour
+    - salut
+    - coucou
+    - bonsoir
+    - bonne journée
+    - bonne matinée
+    - s'il vous plaît
+    - j'ai besoin d'aide
+    - tu peux m'aider
+    - je veux commencer
+    - on commence
+
+# ---------------------------
+# GOODBYE (EN/FR)
+# ---------------------------
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - thanks bye
+    - end chat
+    - stop
+    - exit
+    - ok bye
+    - au revoir
+    - bye bye
+    - à bientôt
+    - merci au revoir
+    - c'est bon merci
+    - à plus
+    - fin
+
+# ---------------------------
+# REPORT ISSUE (EN/FR)
+# ---------------------------
+- intent: report_issue
+  examples: |
+    - I want to make a reclamation
+    - I want to report an issue
+    - I need to file a complaint
+    - I have a problem
+    - Something is not working
+    - I want to open a ticket
+    - create a ticket
+    - open a support ticket
+    - I want to complain
+    - I want to report a bug
+    - I need technical support
+    - I need assistance
+    - I have an issue with my security system
+    - my device is not working
+    - I want to submit a reclamation
+    - Can you register a complaint for me?
+    - I want to declare a problem
+    - I have a malfunction
+    - I need help with the camera system
+    - Je veux faire une réclamation
+    - Je veux signaler un problème
+    - Je veux déposer une plainte
+    - J'ai un problème
+    - Ça ne marche pas
+    - Quelque chose ne fonctionne pas
+    - Je veux ouvrir un ticket
+    - Créer un ticket
+    - Ouvrir un ticket support
+    - Je veux me plaindre
+    - Je veux signaler un bug
+    - J'ai besoin du support technique
+    - J'ai un souci avec mon système
+    - Mon appareil ne marche pas
+    - Je veux soumettre une réclamation
+    - Pouvez-vous enregistrer une réclamation ?
+    - J'ai une panne
+    - J'ai besoin d'aide pour la caméra
+
+# ---------------------------
+# PROBLEM DESCRIPTION (EN/FR) with entity
+# ---------------------------
+- intent: problem_description
+  examples: |
+    - My camera is not recording [properly](problem_description)
+    - The [alarm keeps going off for no reason](problem_description)
+    - [Software crashes every time I open it](problem_description)
+    - [Access control system is not recognizing my card](problem_description)
+    - [Motion detector gives false alerts](problem_description)
+    - [Security dashboard shows connection error](problem_description)
+    - [Biometric scanner is not working](problem_description)
+    - [System rebooted unexpectedly](problem_description)
+    - [Can't access the surveillance feed](problem_description)
+    - [Notification alerts are delayed](problem_description)
+    - [Camera image is black](problem_description)
+    - [The NVR is offline](problem_description)
+    - [The app keeps closing](problem_description)
+    - [The software freezes](problem_description)
+    - [The CCTV feed buffers a lot](problem_description)
+    - [Alarm panel keeps beeping](problem_description)
+    - [Camera is blurry](problem_description)
+    - [No signal on camera](problem_description)
+    - [Dashboard says timeout](problem_description)
+    - [Unable to login](problem_description)
+    - [My software keeps crashing](problem_description)
+    - La caméra ne filme pas [correctement](problem_description)
+    - L'[alarme sonne sans raison](problem_description)
+    - Le [logiciel plante quand je l'ouvre](problem_description)
+    - Le [contrôle d’accès ne reconnaît pas ma carte](problem_description)
+    - Le [détecteur de mouvement donne de fausses alertes](problem_description)
+    - Le [dashboard affiche une erreur de connexion](problem_description)
+    - Le [scanner biométrique ne marche pas](problem_description)
+    - Le [système redémarre tout seul](problem_description)
+    - Je n'arrive pas à [voir le flux vidéo](problem_description)
+    - Les [notifications arrivent en retard](problem_description)
+    - L'[image caméra est noire](problem_description)
+    - Le [NVR est hors ligne](problem_description)
+    - L'[application se ferme](problem_description)
+    - Le [logiciel se bloque](problem_description)
+    - Le [flux CCTV coupe souvent](problem_description)
+    - Le [panneau d’alarme bip en continu](problem_description)
+    - La [caméra est floue](problem_description)
+    - [Pas de signal](problem_description)
+    - Le [tableau de bord dit timeout](problem_description)
+    - Impossible de [se connecter](problem_description)
+
+# ---------------------------
+# INFORM (username EN/FR)
+# ---------------------------
+- intent: inform
+  examples: |
+    - [melek](username)
+    - [youssef](username)
+    - [mounir](username)
+    - [mohamed](username)
+    - [ahmed](username)
+    - [ali](username)
+    - [fatima](username)
+    - [sarah](username)
+    - [test123](username)
+    - [admin01](username)
+    - my name is [melek](username)
+    - i'm [mohamed](username)
+    - username is [ahmed](username)
+    - call me [ali](username)
+    - mon nom est [melek](username)
+    - je suis [mohamed](username)
+    - mon username est [ahmed](username)
+    - appelle moi [ali](username)
+
+# ---------------------------
+# TRACK RECLAMATION (EN/FR)
+# ---------------------------
+- intent: track_reclamation
+  examples: |
+    - I want to track my reclamation
+    - track my complaint
+    - track my ticket
+    - check my ticket status
+    - what's the status of my ticket
+    - where is my complaint
+    - status update please
+    - can you check my reclamation
+    - check my case
+    - follow up my ticket
+    - I want to know if my ticket is resolved
+    - show my ticket status
+    - lookup my complaint
+    - find my ticket
+    - Je veux suivre ma réclamation
+    - suivre ma réclamation
+    - suivre mon ticket
+    - vérifier le statut du ticket
+    - c'est où ma réclamation
+    - je veux le statut de ma plainte
+    - mise à jour de statut
+    - tu peux vérifier ma réclamation
+    - vérifier mon dossier
+    - je veux suivre mon problème
+    - mon ticket est résolu ?
+    - afficher le statut du ticket
+    - rechercher mon ticket
+
+# ---------------------------
+# PROVIDE TRACKING ID (EN/FR)
+# ---------------------------
+- intent: provide_tracking_id
+  examples: |
+    - My reclamation ID is [88](reclamation_id)
+    - ID [93](reclamation_id)
+    - ticket [123](reclamation_id)
+    - number [55](reclamation_id)
+    - it's [77](reclamation_id)
+    - the id is [42](reclamation_id)
+    - reclamation [100](reclamation_id)
+    - case id [19](reclamation_id)
+    - [12](reclamation_id)
+    - [999](reclamation_id)
+    - L'ID de ma réclamation est [88](reclamation_id)
+    - ID [93](reclamation_id)
+    - ticket [123](reclamation_id)
+    - numéro [55](reclamation_id)
+    - c'est [77](reclamation_id)
+    - l'id est [42](reclamation_id)
+    - réclamation [100](reclamation_id)
+    - dossier [19](reclamation_id)
+    - [12](reclamation_id)
+
+# ---------------------------
+# PROVIDE EMAIL (EN/FR)
+# ---------------------------
+- intent: provide_email
+  examples: |
+    - my email is [john@example.com](email)
+    - you can email me at [hello@world.com](email)
+    - [support@company.com](email)
+    - email [user123@gmail.com](email)
+    - it's [melek@duraprotect.com](email)
+    - contact me on [admin@admin.com](email)
+    - send updates to [youssef@gmail.com](email)
+    - mon email est [melek@duraprotect.com](email)
+    - voici mon mail [user123@gmail.com](email)
+    - adresse email [contact@me.com](email)
+    - tu peux m'écrire à [hello@world.com](email)
+
+# ---------------------------
+# PROVIDE PHONE (EN/FR)
+# ---------------------------
+- intent: provide_phone
+  examples: |
+    - my number is [+21612345678](phone)
+    - phone [0123456789](phone)
+    - call me at [9876543210](phone)
+    - my phone is [55123456](phone)
+    - [12345678](phone)
+    - contact number [22223333](phone)
+    - mon numéro est [+21612345678](phone)
+    - numéro [55123456](phone)
+    - téléphone [0123456789](phone)
+    - appelez-moi au [98765432](phone)
+
+# ---------------------------
+# COMPANY (EN/FR)
+# ---------------------------
+- intent: ask_company_info
+  examples: |
+    - Tell me about your company
+    - what is Duraprotect
+    - what do you do
+    - who are you
+    - company info
+    - parler de votre entreprise
+    - c'est quoi Duraprotect
+    - qui êtes-vous
+    - info société
+
+- intent: company_history
+  examples: |
+    - when was Duraprotect founded
+    - what is your history
+    - who created Duraprotect
+    - quand Duraprotect a été fondée
+    - l'histoire de votre entreprise
+    - qui a créé Duraprotect
+
+- intent: company_services
+  examples: |
+    - what services do you offer
+    - do you install cameras
+    - do you provide alarm systems
+    - list your services
+    - quels services proposez-vous
+    - vous installez des caméras
+    - vous avez des alarmes
+    - liste des services
+
+- intent: company_contact
+  examples: |
+    - how can i contact you
+    - what is your email
+    - support contact please
+    - comment vous contacter
+    - quel est votre email
+    - contact support
+    - coordonnées
+
+- intent: company_values
+  examples: |
+    - what are your values
+    - what do you stand for
+    - core values
+    - quelles sont vos valeurs
+    - vos principes
+    - ce que vous défendez
+
+- intent: company_mission
+  examples: |
+    - what is your mission
+    - what is your purpose
+    - why do you exist
+    - quelle est votre mission
+    - votre objectif
+    - pourquoi l'entreprise existe
+
+- intent: product_support
+  examples: |
+    - i need help with my camera
+    - my alarm is not working
+    - i need technical support
+    - help me troubleshoot
+    - j'ai besoin d'aide pour la caméra
+    - mon alarme ne marche pas
+    - j'ai besoin du support technique
+    - aide dépannage
+
+- intent: system_security_questions
+  examples: |
+    - how do you secure systems
+    - do you use encryption
+    - how is my data protected
+    - quelles mesures de sécurité utilisez-vous
+    - vous utilisez du chiffrement
+    - comment mes données sont protégées

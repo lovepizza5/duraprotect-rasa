@@ -1,0 +1,7 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "track_reclamation_form",
+    "reclamation_form"
+  ]
+}
