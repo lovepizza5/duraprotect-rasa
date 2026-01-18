@@ -136,7 +136,7 @@ class ActionSubmitReclamation(Action):
                     f"👤 Username: {username or 'Anonymous'}\n"
                     f"📝 Issue: {str(reclamation_message)[:100]}...\n"
                     f"🚨 Priority: {priority}\n"
-                    f"😊 Sentiment: {sentiment}\n\n"
+                    f" Sentiment: {sentiment}\n\n"
                     f"We will review your issue and contact you soon."
                 )
 

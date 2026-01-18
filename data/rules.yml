@@ -2,39 +2,29 @@
 version: "3.1"
 
 rules:
-  - rule: Say goodbye
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - rule: Ask for details when user reports issue
+  # Ask for details when user reports issue
+  - rule: Ask for problem details
     steps:
       - intent: report_issue
       - action: utter_ask_for_details
 
-  # Start reclamation form once user describes the problem
-  - rule: Activate reclamation form on problem description
+  # When user provides problem description, capture it and ask for username
+  - rule: Start form with problem
     steps:
       - intent: problem_description
-      - action: reclamation_form
-      - active_loop: reclamation_form
+      - slot_was_set:
+        - reclamation_message
+      - action: utter_ask_username
 
-  - rule: Submit reclamation form
-    condition:
-      - active_loop: reclamation_form
+  # Handle direct problem description
+  - rule: Handle direct problem description
     steps:
-      - action: reclamation_form
-      - active_loop: null
-      - action: action_submit_reclamation
-      - action: utter_goodbye
+      - intent: problem_description
+      - slot_was_set:
+        - reclamation_message
+      - action: utter_ask_username
 
-  # Tracking form (ID only)
-  - rule: Activate tracking form
-    steps:
-      - intent: track_reclamation
-      - action: track_reclamation_form
-      - active_loop: track_reclamation_form
-
+  # Submit tracking form when completed
   - rule: Submit tracking form
     condition:
       - active_loop: track_reclamation_form
@@ -42,6 +32,12 @@ rules:
       - action: track_reclamation_form
       - active_loop: null
       - action: action_track_reclamation
+
+  # Goodbye rule
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
   # Company info rules
   - rule: Respond to company info request
@@ -83,3 +79,21 @@ rules:
     steps:
       - intent: system_security_questions
       - action: utter_system_security_questions
+
+  # TRACKING RULES
+  - rule: Activate tracking form
+    steps:
+      - intent: track_reclamation
+      - action: utter_ask_track_reclamation
+      - action: track_reclamation_form
+      - active_loop: track_reclamation_form
+
+  # FIXED: Submit reclamation form
+  - rule: Submit reclamation form
+    condition:
+      - active_loop: reclamation_form
+    steps:
+      - action: reclamation_form
+      - active_loop: null
+      - action: action_submit_reclamation
+      - action: utter_goodbye  # ADDED: Make consistent with stories

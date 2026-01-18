@@ -1,4 +1,3 @@
-#domain.yml
 version: "3.1"
 
 intents:
@@ -89,108 +88,68 @@ responses:
   utter_greet:
     - text: "Hello 👋 Welcome to Duraprotect Support. Do you want to report an issue or track a reclamation?"
     - text: "Hi! I can help you submit a reclamation, track a ticket, or answer questions about Duraprotect."
-    - text: "Bonjour 👋 Bienvenue chez Duraprotect Support. Vous souhaitez déclarer un problème ou suivre une réclamation ?"
-    - text: "Salut ! Je peux vous aider à créer une réclamation, suivre un ticket, ou répondre à vos questions."
-    - text: "Bienvenue ✅ Dites-moi : (1) déposer une réclamation ou (2) suivre une réclamation ?"
 
   utter_ask_for_details:
     - text: "Sure — please describe the issue with as many details as possible."
     - text: "What exactly is not working? Please explain the problem."
     - text: "Understood. When did the problem start and what did you notice?"
-    - text: "D’accord — décrivez le problème en détail (appareil, erreur, moment, symptômes)."
-    - text: "Pouvez-vous expliquer ce qui ne marche pas exactement ?"
-    - text: "Merci. Donnez-moi une description claire du souci pour que je l’enregistre."
 
   utter_ask_username:
     - text: "What username should I use for this reclamation?"
     - text: "Please provide your username to create the ticket."
-    - text: "Quel est votre nom d’utilisateur pour enregistrer la réclamation ?"
-    - text: "Merci. Donnez-moi votre username (ex: melek, admin01)."
-    - text: "Pour ouvrir le ticket, j’ai besoin de votre nom d’utilisateur."
 
   utter_ask_reclamation_message:
     - text: "Please describe the issue (device/software, error message, what happens)."
     - text: "Can you provide more details about the issue you’re reporting?"
-    - text: "Décrivez le problème (matériel/logiciel, message d’erreur, quand ça arrive)."
-    - text: "Expliquez ce qui se passe exactement (symptômes, erreurs, étapes)."
-    - text: "Merci d’écrire une description courte mais précise."
 
   utter_ask_email:
     - text: "Please provide your email so we can send you updates."
     - text: "What email address should we use to contact you?"
-    - text: "Veuillez fournir votre email pour recevoir les mises à jour."
-    - text: "Quel est votre email pour le suivi de la réclamation ?"
-    - text: "Donnez-moi une adresse email valide (ex: nom@exemple.com)."
 
   utter_ask_phone:
     - text: "Please provide your phone number (for urgent contact if needed)."
     - text: "What phone number can we reach you on?"
-    - text: "Veuillez fournir votre numéro de téléphone."
-    - text: "Quel numéro peut-on utiliser pour vous contacter ?"
-    - text: "Entrez un numéro valide (au moins 5 chiffres)."
 
-  utter_ask_reclamation_id:
+  utter_ask_track_reclamation:
     - text: "Please provide your reclamation ID (ticket number)."
     - text: "What is your reclamation ID? Example: 88, 123, 42."
     - text: "To track your case, please send your ticket ID."
-    - text: "Veuillez donner votre numéro de réclamation (ID du ticket)."
-    - text: "Quel est l’ID de votre réclamation ? (ex: 88, 123, 42)"
-    - text: "Pour suivre votre dossier, envoyez-moi le numéro du ticket."
 
   utter_goodbye:
     - text: "Thanks for contacting Duraprotect Support. Goodbye 👋"
     - text: "All set ✅ If you need anything else, message us anytime."
-    - text: "Merci d’avoir contacté Duraprotect. Au revoir 👋"
-    - text: "C’est noté ✅ N’hésitez pas à revenir si vous avez besoin."
-    - text: "Bonne journée ! Restez en sécurité 🔒"
 
   utter_company_info:
     - text: "Duraprotect provides integrated security: cameras, alarms, access control, and cybersecurity."
     - text: "We offer physical security systems and cybersecurity services for homes and businesses."
-    - text: "Duraprotect propose des solutions de sécurité intégrées : caméras, alarmes, contrôle d’accès, cybersécurité."
-    - text: "Nous fournissons des solutions de sécurité physique + cybersécurité pour entreprises et particuliers."
 
   utter_company_history:
     - text: "Duraprotect was founded in 2021 to deliver unified physical and digital security solutions."
     - text: "We started in 2021 with a focus on modern, integrated security services."
-    - text: "Duraprotect a été fondée en 2021 avec une vision : sécuriser physiquement et numériquement."
-    - text: "Depuis 2021, nous développons des solutions de sécurité modernes et intégrées."
 
   utter_company_services:
     - text: "Services: camera installation, alarm systems, access control, cybersecurity protection, and support."
     - text: "We provide physical security + cybersecurity + maintenance."
-    - text: "Services : installation caméras, alarmes, contrôle d’accès, cybersécurité, support technique."
-    - text: "Nous assurons installation, intégration, maintenance et assistance."
 
   utter_contact:
     - text: "Contact: support@duraprotect.com | Hotline: +1-800-DURA-PRO"
     - text: "You can reach support by email or hotline."
-    - text: "Contact : support@duraprotect.com | Hotline : +1-800-DURA-PRO"
-    - text: "Vous pouvez nous contacter par email ou téléphone."
 
   utter_company_values:
     - text: "Our values: reliability, innovation, integrity, and customer focus."
     - text: "We prioritize trust, transparency, and strong engineering."
-    - text: "Nos valeurs : fiabilité, innovation, intégrité et orientation client."
-    - text: "Nous privilégions la confiance, la transparence et la qualité."
 
   utter_company_mission:
     - text: "Our mission is proactive security: prevent threats before they escalate."
     - text: "We aim to make advanced security accessible and effective."
-    - text: "Notre mission : une sécurité proactive pour prévenir les menaces."
-    - text: "Nous voulons rendre la sécurité avancée accessible et efficace."
 
   utter_product_support:
     - text: "For support: submit a reclamation here, call the hotline, or request a technician."
     - text: "I can help you register an issue or guide troubleshooting."
-    - text: "Pour le support : créez une réclamation ici, appelez la hotline, ou demandez un technicien."
-    - text: "Je peux enregistrer le problème ou vous guider pour un diagnostic."
 
   utter_system_security_questions:
     - text: "We use encryption, authentication controls, monitoring, and regular updates."
     - text: "Security layers include strong encryption and continuous patching."
-    - text: "Nous utilisons chiffrement, contrôle d’accès, monitoring et mises à jour régulières."
-    - text: "Les mesures incluent chiffrement, authentification, surveillance et correctifs."
 
 actions:
   - action_submit_reclamation

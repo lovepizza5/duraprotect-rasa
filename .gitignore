@@ -40,3 +40,7 @@ Thumbs.db
 
 # Keep models in GitHub ✅ (IMPORTANT)
 # (Do NOT ignore /models)
+
+# Rasa runtime/cache (do not commit)
+.rasa/
+

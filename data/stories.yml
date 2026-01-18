@@ -2,33 +2,113 @@
 version: "3.1"
 
 stories:
-- story: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- story: complete reclamation path (with form)
+- story: complete reclamation path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: report_issue
   - action: utter_ask_for_details
   - intent: problem_description
+  - slot_was_set:
+    - reclamation_message
+  - action: utter_ask_username
+  - intent: inform
+    entities:
+    - username
+  - slot_was_set:
+    - username
   - action: reclamation_form
   - active_loop: reclamation_form
   - active_loop: null
   - action: action_submit_reclamation
   - action: utter_goodbye
 
-- story: track reclamation by id
+- story: direct problem description
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: problem_description
+  - slot_was_set:
+    - reclamation_message
+  - action: utter_ask_username
+  - intent: inform
+    entities:
+    - username
+  - slot_was_set:
+    - username
+  - action: reclamation_form
+  - active_loop: reclamation_form
+  - active_loop: null
+  - action: action_submit_reclamation  # CHANGED: Remove utter_submit
+  - action: utter_goodbye
+
+- story: software crash problem
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: problem_description
+    entities:
+    - problem_description
+  - slot_was_set:
+    - reclamation_message: "Software crashed"
+  - action: utter_ask_username
+  - intent: inform
+    entities:
+    - username
+  - slot_was_set:
+    - username
+  - action: reclamation_form
+  - active_loop: reclamation_form
+  - active_loop: null
+  - action: action_submit_reclamation  # CHANGED: Remove utter_submit
+  - action: utter_goodbye
+
+- story: company information flow
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_company_info
+  - action: utter_company_info
+  - intent: company_services
+  - action: utter_company_services
+  - intent: company_contact
+  - action: utter_contact
+
+- story: company history and mission
+  steps:
+  - intent: company_history
+  - action: utter_company_history
+  - intent: company_mission
+  - action: utter_company_mission
+  - intent: company_values
+  - action: utter_company_values
+
+- story: product support inquiry
+  steps:
+  - intent: product_support
+  - action: utter_product_support
+  - intent: report_issue
+  - action: utter_ask_for_details
+
+- story: technical security questions
+  steps:
+  - intent: system_security_questions
+  - action: utter_system_security_questions
+
+- story: track reclamation with username only
+  steps:
   - intent: track_reclamation
+  - action: utter_ask_track_reclamation
   - action: track_reclamation_form
   - active_loop: track_reclamation_form
-  - intent: provide_tracking_id
-    entities:
-      - reclamation_id: "88"
+  - active_loop: null
+  - action: action_track_reclamation
+
+- story: track reclamation with ID
+  steps:
+  - intent: track_reclamation
+  - action: utter_ask_track_reclamation
+  - action: track_reclamation_form
+  - active_loop: track_reclamation_form
   - active_loop: null
   - action: action_track_reclamation

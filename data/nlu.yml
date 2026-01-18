@@ -1,4 +1,3 @@
-#nlu.yml
 version: "3.1"
 
 nlu:
@@ -19,7 +18,7 @@ nlu:
     - \+?\d[\d\s\-]{4,}\d
 
 # ---------------------------
-# GREET (EN/FR)
+# GREET (EN)
 # ---------------------------
 - intent: greet
   examples: |
@@ -33,20 +32,9 @@ nlu:
     - start
     - can you help me
     - I need help
-    - bonjour
-    - salut
-    - coucou
-    - bonsoir
-    - bonne journée
-    - bonne matinée
-    - s'il vous plaît
-    - j'ai besoin d'aide
-    - tu peux m'aider
-    - je veux commencer
-    - on commence
 
 # ---------------------------
-# GOODBYE (EN/FR)
+# GOODBYE (EN)
 # ---------------------------
 - intent: goodbye
   examples: |
@@ -58,16 +46,9 @@ nlu:
     - stop
     - exit
     - ok bye
-    - au revoir
-    - bye bye
-    - à bientôt
-    - merci au revoir
-    - c'est bon merci
-    - à plus
-    - fin
 
 # ---------------------------
-# REPORT ISSUE (EN/FR)
+# REPORT ISSUE (EN)
 # ---------------------------
 - intent: report_issue
   examples: |
@@ -90,27 +71,9 @@ nlu:
     - I want to declare a problem
     - I have a malfunction
     - I need help with the camera system
-    - Je veux faire une réclamation
-    - Je veux signaler un problème
-    - Je veux déposer une plainte
-    - J'ai un problème
-    - Ça ne marche pas
-    - Quelque chose ne fonctionne pas
-    - Je veux ouvrir un ticket
-    - Créer un ticket
-    - Ouvrir un ticket support
-    - Je veux me plaindre
-    - Je veux signaler un bug
-    - J'ai besoin du support technique
-    - J'ai un souci avec mon système
-    - Mon appareil ne marche pas
-    - Je veux soumettre une réclamation
-    - Pouvez-vous enregistrer une réclamation ?
-    - J'ai une panne
-    - J'ai besoin d'aide pour la caméra
 
 # ---------------------------
-# PROBLEM DESCRIPTION (EN/FR) with entity
+# PROBLEM DESCRIPTION (EN) with entity
 # ---------------------------
 - intent: problem_description
   examples: |
@@ -135,29 +98,9 @@ nlu:
     - [Dashboard says timeout](problem_description)
     - [Unable to login](problem_description)
     - [My software keeps crashing](problem_description)
-    - La caméra ne filme pas [correctement](problem_description)
-    - L'[alarme sonne sans raison](problem_description)
-    - Le [logiciel plante quand je l'ouvre](problem_description)
-    - Le [contrôle d’accès ne reconnaît pas ma carte](problem_description)
-    - Le [détecteur de mouvement donne de fausses alertes](problem_description)
-    - Le [dashboard affiche une erreur de connexion](problem_description)
-    - Le [scanner biométrique ne marche pas](problem_description)
-    - Le [système redémarre tout seul](problem_description)
-    - Je n'arrive pas à [voir le flux vidéo](problem_description)
-    - Les [notifications arrivent en retard](problem_description)
-    - L'[image caméra est noire](problem_description)
-    - Le [NVR est hors ligne](problem_description)
-    - L'[application se ferme](problem_description)
-    - Le [logiciel se bloque](problem_description)
-    - Le [flux CCTV coupe souvent](problem_description)
-    - Le [panneau d’alarme bip en continu](problem_description)
-    - La [caméra est floue](problem_description)
-    - [Pas de signal](problem_description)
-    - Le [tableau de bord dit timeout](problem_description)
-    - Impossible de [se connecter](problem_description)
 
 # ---------------------------
-# INFORM (username EN/FR)
+# INFORM (username EN)
 # ---------------------------
 - intent: inform
   examples: |
@@ -175,13 +118,9 @@ nlu:
     - i'm [mohamed](username)
     - username is [ahmed](username)
     - call me [ali](username)
-    - mon nom est [melek](username)
-    - je suis [mohamed](username)
-    - mon username est [ahmed](username)
-    - appelle moi [ali](username)
 
 # ---------------------------
-# TRACK RECLAMATION (EN/FR)
+# TRACK RECLAMATION (EN)
 # ---------------------------
 - intent: track_reclamation
   examples: |
@@ -199,22 +138,9 @@ nlu:
     - show my ticket status
     - lookup my complaint
     - find my ticket
-    - Je veux suivre ma réclamation
-    - suivre ma réclamation
-    - suivre mon ticket
-    - vérifier le statut du ticket
-    - c'est où ma réclamation
-    - je veux le statut de ma plainte
-    - mise à jour de statut
-    - tu peux vérifier ma réclamation
-    - vérifier mon dossier
-    - je veux suivre mon problème
-    - mon ticket est résolu ?
-    - afficher le statut du ticket
-    - rechercher mon ticket
 
 # ---------------------------
-# PROVIDE TRACKING ID (EN/FR)
+# PROVIDE TRACKING ID (EN)
 # ---------------------------
 - intent: provide_tracking_id
   examples: |
@@ -228,18 +154,9 @@ nlu:
     - case id [19](reclamation_id)
     - [12](reclamation_id)
     - [999](reclamation_id)
-    - L'ID de ma réclamation est [88](reclamation_id)
-    - ID [93](reclamation_id)
-    - ticket [123](reclamation_id)
-    - numéro [55](reclamation_id)
-    - c'est [77](reclamation_id)
-    - l'id est [42](reclamation_id)
-    - réclamation [100](reclamation_id)
-    - dossier [19](reclamation_id)
-    - [12](reclamation_id)
 
 # ---------------------------
-# PROVIDE EMAIL (EN/FR)
+# PROVIDE EMAIL (EN)
 # ---------------------------
 - intent: provide_email
   examples: |
@@ -250,13 +167,9 @@ nlu:
     - it's [melek@duraprotect.com](email)
     - contact me on [admin@admin.com](email)
     - send updates to [youssef@gmail.com](email)
-    - mon email est [melek@duraprotect.com](email)
-    - voici mon mail [user123@gmail.com](email)
-    - adresse email [contact@me.com](email)
-    - tu peux m'écrire à [hello@world.com](email)
 
 # ---------------------------
-# PROVIDE PHONE (EN/FR)
+# PROVIDE PHONE (EN)
 # ---------------------------
 - intent: provide_phone
   examples: |
@@ -266,13 +179,9 @@ nlu:
     - my phone is [55123456](phone)
     - [12345678](phone)
     - contact number [22223333](phone)
-    - mon numéro est [+21612345678](phone)
-    - numéro [55123456](phone)
-    - téléphone [0123456789](phone)
-    - appelez-moi au [98765432](phone)
 
 # ---------------------------
-# COMPANY (EN/FR)
+# COMPANY (EN)
 # ---------------------------
 - intent: ask_company_info
   examples: |
@@ -281,19 +190,12 @@ nlu:
     - what do you do
     - who are you
     - company info
-    - parler de votre entreprise
-    - c'est quoi Duraprotect
-    - qui êtes-vous
-    - info société
 
 - intent: company_history
   examples: |
     - when was Duraprotect founded
     - what is your history
     - who created Duraprotect
-    - quand Duraprotect a été fondée
-    - l'histoire de votre entreprise
-    - qui a créé Duraprotect
 
 - intent: company_services
   examples: |
@@ -301,38 +203,24 @@ nlu:
     - do you install cameras
     - do you provide alarm systems
     - list your services
-    - quels services proposez-vous
-    - vous installez des caméras
-    - vous avez des alarmes
-    - liste des services
 
 - intent: company_contact
   examples: |
     - how can i contact you
     - what is your email
     - support contact please
-    - comment vous contacter
-    - quel est votre email
-    - contact support
-    - coordonnées
 
 - intent: company_values
   examples: |
     - what are your values
     - what do you stand for
     - core values
-    - quelles sont vos valeurs
-    - vos principes
-    - ce que vous défendez
 
 - intent: company_mission
   examples: |
     - what is your mission
     - what is your purpose
     - why do you exist
-    - quelle est votre mission
-    - votre objectif
-    - pourquoi l'entreprise existe
 
 - intent: product_support
   examples: |
@@ -340,16 +228,9 @@ nlu:
     - my alarm is not working
     - i need technical support
     - help me troubleshoot
-    - j'ai besoin d'aide pour la caméra
-    - mon alarme ne marche pas
-    - j'ai besoin du support technique
-    - aide dépannage
 
 - intent: system_security_questions
   examples: |
     - how do you secure systems
     - do you use encryption
     - how is my data protected
-    - quelles mesures de sécurité utilisez-vous
-    - vous utilisez du chiffrement
-    - comment mes données sont protégées
